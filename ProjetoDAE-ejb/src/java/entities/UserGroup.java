@@ -2,6 +2,7 @@ package entities;
 
 import java.io.Serializable;
 import java.util.Objects;
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.EnumType;
 import javax.persistence.Enumerated;
@@ -15,11 +16,12 @@ import javax.persistence.Table;
 public class UserGroup implements Serializable {
 
     public static enum GROUP {
-        Administrator, Teacher, Student
+        CCPMember, Teacher, Institution, Student
     }
     
     @Id
     @Enumerated(EnumType.STRING)
+    @Column(name = "GROUP_NAME")
     private GROUP groupName;
 
     @Id
