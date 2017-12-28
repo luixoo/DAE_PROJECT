@@ -30,13 +30,13 @@ public class User implements Serializable {
     @Id
     protected String username;
     
-    @NotNull(message = "A password não pode estar vazia.")
+    @NotNull(message = "Password cannot be empty")
     protected String password;
     
-    @NotNull(message = "O nome não pode estar vazio.")
+    @NotNull(message = "Name cannot be empty")
     protected String name;
     
-    @NotNull(message = "O email não pode estar vazio.")
+    @NotNull(message = "Email cannot be empty")
     @Pattern(regexp = "[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\\."
                     + "[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@"
                     + "(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?",

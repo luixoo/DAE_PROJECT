@@ -9,6 +9,7 @@ import entities.UserGroup.GROUP;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.NamedQuery;
+import javax.persistence.Table;
 
 /**
  *
@@ -16,6 +17,7 @@ import javax.persistence.NamedQuery;
  */
 
 @Entity
+@Table(name = "CCP_USERS")
 @NamedQuery(name = "getAllCCPMembers", query = "SELECT s FROM CCPMember s ORDER BY s.name")
 public class CCPMember extends User implements Serializable {
     
